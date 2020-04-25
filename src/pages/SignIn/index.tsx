@@ -62,7 +62,7 @@ const SignIn: React.FC = () => {
       // });
 
       // history.push('/dashboard');
-      Alert.alert('🎉 Bem vindo ao app', '🧔GoBarber💇‍♂️️💈️!');
+      Alert.alert(`🎉 Bem vindo ao app`, `🧔GoBarber💇‍♂️️💈️!`);
     } catch (err) {
       if (err instanceof Yup.ValidationError) {
         const errors = getValidationErrors(err);
