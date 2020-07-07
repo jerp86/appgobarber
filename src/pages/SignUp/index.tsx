@@ -33,7 +33,7 @@ interface SignUpFormData {
 
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-  const nameInputRef = useRef<TextInput>(null);
+  const emailInputRef = useRef<TextInput>(null);
   const passwordInputRef = useRef<TextInput>(null);
 
   const navigation = useNavigation();
@@ -96,7 +96,7 @@ const SignUp: React.FC = () => {
             <Image source={logoImg} />
 
             <View>
-              <Title>Faça seu logon</Title>
+              <Title>Crie sua conta</Title>
             </View>
 
             <Form ref={formRef} onSubmit={handleSubmit}>
@@ -107,12 +107,12 @@ const SignUp: React.FC = () => {
                 autoCapitalize="words"
                 returnKeyType="next"
                 onSubmitEditing={() => {
-                  nameInputRef.current?.focus();
+                  emailInputRef.current?.focus();
                 }}
               />
 
               <Input
-                ref={nameInputRef}
+                ref={emailInputRef}
                 keyboardType="email-address"
                 autoCorrect={false}
                 autoCapitalize="none"

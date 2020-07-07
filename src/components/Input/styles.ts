@@ -35,7 +35,7 @@ export const Container = styled.View<ContainerProps>`
   ${(props) =>
     props.isFocused &&
     css`
-      border-color: #f79000;
+      border-color: #ff9000;
     `}
 `;
 
@@ -60,6 +60,6 @@ export const Icon = styled(FeatherIcon)<IconProps>`
     (props.isFocused || props.isFilled) &&
     !props.isErrored &&
     css`
-      color: #f79000;
+      color: #ff9000;
     `}
 `;
