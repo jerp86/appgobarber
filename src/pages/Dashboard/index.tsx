@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
-import { useAuth } from 'src/hooks/auth';
-import api from 'src/services/api';
+import { useAuth } from '../../hooks/auth';
+import api from '../../services/api';
 
 import {
   Container,
@@ -52,6 +52,11 @@ const Dashboard: React.FC = () => {
     [navigate],
   );
 
+  const avatarFake = (): string => {
+    const numberAvatar = Math.floor(Math.random() * 255);
+    return `https://api.adorable.io/avatars/134/${numberAvatar}`;
+  };
+
   return (
     <Container>
       <Header>
@@ -61,7 +66,7 @@ const Dashboard: React.FC = () => {
         </HeaderTitle>
 
         <ProfileButton onPress={navigateToProvile}>
-          <UserAvatar source={{ uri: user.avatar_url }} />
+          <UserAvatar source={{ uri: user.avatar_url ?? avatarFake() }} />
         </ProfileButton>
       </Header>
 
@@ -81,12 +86,12 @@ const Dashboard: React.FC = () => {
               <ProviderName>{provider.name}</ProviderName>
 
               <ProviderMeta>
-                <Icon name="calendar" size={14} color="ff9000" />
+                <Icon name="calendar" size={14} color="#ff9000" />
                 <ProviderMetaText>Segunda à sexta</ProviderMetaText>
               </ProviderMeta>
 
               <ProviderMeta>
-                <Icon name="clock" size={14} color="ff9000" />
+                <Icon name="clock" size={14} color="#ff9000" />
                 <ProviderMetaText>08h às 18h</ProviderMetaText>
               </ProviderMeta>
             </ProviderInfo>
