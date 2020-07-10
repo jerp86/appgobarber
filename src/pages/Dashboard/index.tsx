@@ -40,7 +40,7 @@ const Dashboard: React.FC = () => {
     });
   }, []);
 
-  const navigateToProvile = useCallback(() => {
+  const navigateToProfile = useCallback(() => {
     // navigate('Profile');
     signOut();
   }, [signOut]);
@@ -52,11 +52,6 @@ const Dashboard: React.FC = () => {
     [navigate],
   );
 
-  const avatarFake = (): string => {
-    const numberAvatar = Math.floor(Math.random() * 255);
-    return `https://api.adorable.io/avatars/134/${numberAvatar}`;
-  };
-
   return (
     <Container>
       <Header>
@@ -65,8 +60,8 @@ const Dashboard: React.FC = () => {
           <UserName>{user.name}</UserName>
         </HeaderTitle>
 
-        <ProfileButton onPress={navigateToProvile}>
-          <UserAvatar source={{ uri: user.avatar_url ?? avatarFake() }} />
+        <ProfileButton onPress={navigateToProfile}>
+          <UserAvatar source={{ uri: user.avatar_url }} />
         </ProfileButton>
       </Header>
 
