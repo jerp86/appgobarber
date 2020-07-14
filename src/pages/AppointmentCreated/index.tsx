@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const AppoitmentCreated: React.FC = () => {
+const AppointmentCreated: React.FC = () => {
   return <Container />;
 };
 
-export default AppoitmentCreated;
+export default AppointmentCreated;
