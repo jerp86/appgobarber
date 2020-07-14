@@ -78,3 +78,27 @@ export const ProviderName = styled.Text<ProviderNameProps>`
 
   margin-left: 8px;
 `;
+
+export const Calendar = styled.View``;
+
+export const Title = styled.Text`
+  font-family: 'RobotoSlab-Medium';
+  color: #f4ede8;
+  font-size: 24px;
+  margin: 0 24px 24px;
+`;
+
+export const OpenDatePickerButton = styled(RectButton)`
+  background: #ff9000;
+  height: 46px;
+  border-radius: 10px;
+  margin: 0 24px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const OpenDatePickerButtonText = styled.Text`
+  color: #232129;
+  font-size: 16px;
+  font-family: 'RobotoSlab-Medium';
+`;
