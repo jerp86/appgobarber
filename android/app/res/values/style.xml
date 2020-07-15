@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DefaultExplainingPermissionsTheme" parent="Theme.AppCompat.Dark.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">#FF9000</item>
+
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#232129</item>
+
+        <!-- Used for the background -->
+        <item name="android:background">#28262e</item>
+    </style>
+</resources>
